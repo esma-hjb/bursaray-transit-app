@@ -1,0 +1,12 @@
+# --- Çekirdek ---
+requests==2.32.3         # Dış API çağrıları (Faz 4)
+python-dotenv==1.0.1     # Ayarları .env'den okumak (config.py)
+
+# --- Test & kalite ---
+pytest==8.2.0
+pytest-cov==5.0.0
+
+# --- İleride: fazı gelince yorum işaretini kaldır ---
+# rich==13.7.1           # Şık CLI çıktısı (Faz 7)
+# geopy==2.4.1           # Mesafe/geocoding (Faz 5)
+# websockets==12.0       # Canlı araç feed'i (Faz 6)
