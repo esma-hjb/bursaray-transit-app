@@ -1,0 +1,5 @@
+[
+  {"id": "T1", "name": "Sehrekustu - Heykel", "mode": "tram", "stop_ids": ["S001", "S003", "S002"]},
+  {"id": "M1", "name": "Universite - Acemler", "mode": "metro", "stop_ids": ["S004", "S006", "S005"]},
+  {"id": "B1", "name": "Kulturpark - Acemler", "mode": "bus", "stop_ids": ["S003", "S001", "S005"]}
+]
