@@ -1,7 +1,7 @@
 """Stop (Durak) veri modeli.
 
-Bir toplu taşıma durağını temsil eder: kimlik, ad, konum (enlem/boylam)
-ve o duraktan geçen hatların kimlikleri.
+Bir toplu tasima duragini temsil eder: kimlik, ad, konum (enlem/boylam)
+ve o duraktan gecen hatlarin kimlikleri.
 """
 from __future__ import annotations
 
@@ -10,14 +10,14 @@ from dataclasses import dataclass, field
 
 @dataclass
 class Stop:
-    """Tek bir durağı temsil eder.
+    """Tek bir duragi temsil eder.
 
     Alanlar:
-        id: Durağın benzersiz kimliği (örn. "S001").
-        name: Durağın adı (örn. "Şehreküstü").
+        id: Duragin benzersiz kimligi (orn. "S001").
+        name: Duragin adi (orn. "Sehrekustu").
         lat: Enlem (latitude).
         lon: Boylam (longitude).
-        line_ids: Bu duraktan geçen hatların kimlik listesi (örn. ["T1", "B12"]).
+        line_ids: Bu duraktan gecen hatlarin kimlik listesi (orn. ["T1", "B12"]).
     """
 
     id: str
@@ -27,7 +27,7 @@ class Stop:
     line_ids: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict:
-        """Modeli JSON'a yazılabilir bir sözlüğe çevirir."""
+        """Modeli JSON'a yazilabilir bir sozluge cevirir."""
         return {
             "id": self.id,
             "name": self.name,
@@ -38,7 +38,7 @@ class Stop:
 
     @classmethod
     def from_dict(cls, data: dict) -> "Stop":
-        """JSON'dan okunan bir sözlükten Stop nesnesi oluşturur."""
+        """JSON'dan okunan bir sozlukten Stop nesnesi olusturur."""
         return cls(
             id=data["id"],
             name=data["name"],

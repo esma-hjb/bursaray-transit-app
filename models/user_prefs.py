@@ -1,8 +1,8 @@
-"""UserPrefs (Kullanıcı tercihleri) veri modeli.
+"""UserPrefs (Kullanici tercihleri) veri modeli.
 
-Kullanıcının uygulama tercihlerini temsil eder: dil, premium üyelik durumu
-ve favori duraklar. Bu veri çalışma anında üretilir ve config.USER_DATA_FILE
-dosyasında saklanır (flowchart'taki "Onboarding / Language & preferences" adımı).
+Kullanicinin uygulama tercihlerini temsil eder: dil, premium uyelik durumu
+ve favori duraklar. Bu veri calisma aninda uretilir ve config.USER_DATA_FILE
+dosyasinda saklanir (flowchart'taki "Onboarding / Language & preferences" adimi).
 """
 from __future__ import annotations
 
@@ -13,12 +13,12 @@ from config import DEFAULT_LANGUAGE
 
 @dataclass
 class UserPrefs:
-    """Kullanıcının tercihleri.
+    """Kullanicinin tercihleri.
 
     Alanlar:
-        language: Arayüz dili (örn. "tr" veya "en").
-        is_premium: Kullanıcı premium üye mi? (flowchart'taki "Premium user?").
-        favorite_stop_ids: Kullanıcının favori durak kimlikleri.
+        language: Arayuz dili (orn. "tr" veya "en").
+        is_premium: Kullanici premium uye mi? (flowchart'taki "Premium user?").
+        favorite_stop_ids: Kullanicinin favori durak kimlikleri.
     """
 
     language: str = DEFAULT_LANGUAGE
@@ -26,7 +26,7 @@ class UserPrefs:
     favorite_stop_ids: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict:
-        """Modeli JSON'a yazılabilir bir sözlüğe çevirir."""
+        """Modeli JSON'a yazilabilir bir sozluge cevirir."""
         return {
             "language": self.language,
             "is_premium": self.is_premium,
@@ -35,7 +35,7 @@ class UserPrefs:
 
     @classmethod
     def from_dict(cls, data: dict) -> "UserPrefs":
-        """JSON'dan okunan bir sözlükten UserPrefs nesnesi oluşturur."""
+        """JSON'dan okunan bir sozlukten UserPrefs nesnesi olusturur."""
         return cls(
             language=data.get("language", DEFAULT_LANGUAGE),
             is_premium=bool(data.get("is_premium", False)),

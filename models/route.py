@@ -1,7 +1,7 @@
 """Route (Hat) veri modeli.
 
-Bir toplu taşıma hattını temsil eder: kimlik, ad, ulaşım modu
-(otobüs / metro / tramvay) ve hattın uğradığı durakların sırası.
+Bir toplu tasima hattini temsil eder: kimlik, ad, ulasim modu
+(otobus / metro / tramvay) ve hattin ugradigi duraklarin sirasi.
 """
 from __future__ import annotations
 
@@ -10,22 +10,22 @@ from enum import Enum
 
 
 class TransportMode(str, Enum):
-    """Ulaşım modu. (str'den türediği için JSON'a doğrudan yazılabilir.)"""
+    """Ulasim modu. (str'den turedigi icin JSON'a dogrudan yazilabilir.)"""
 
-    BUS = "bus"        # otobüs
+    BUS = "bus"        # otobus
     METRO = "metro"    # metro
     TRAM = "tram"      # tramvay
 
 
 @dataclass
 class Route:
-    """Tek bir hattı temsil eder.
+    """Tek bir hatti temsil eder.
 
     Alanlar:
-        id: Hattın benzersiz kimliği (örn. "T1").
-        name: Hattın adı (örn. "Emek - Şehreküstü").
-        mode: Ulaşım modu (TransportMode.BUS/METRO/TRAM).
-        stop_ids: Hattın uğradığı durakların kimlikleri (sıralı liste).
+        id: Hattin benzersiz kimligi (orn. "T1").
+        name: Hattin adi (orn. "Emek - Sehrekustu").
+        mode: Ulasim modu (TransportMode.BUS/METRO/TRAM).
+        stop_ids: Hattin ugradigi duraklarin kimlikleri (sirali liste).
     """
 
     id: str
@@ -34,7 +34,7 @@ class Route:
     stop_ids: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict:
-        """Modeli JSON'a yazılabilir bir sözlüğe çevirir."""
+        """Modeli JSON'a yazilabilir bir sozluge cevirir."""
         return {
             "id": self.id,
             "name": self.name,
@@ -44,7 +44,7 @@ class Route:
 
     @classmethod
     def from_dict(cls, data: dict) -> "Route":
-        """JSON'dan okunan bir sözlükten Route nesnesi oluşturur."""
+        """JSON'dan okunan bir sozlukten Route nesnesi olusturur."""
         return cls(
             id=data["id"],
             name=data["name"],

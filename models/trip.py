@@ -1,9 +1,9 @@
-"""Trip (Yolculuk/Rota planı) veri modeli.
+"""Trip (Yolculuk/Rota plani) veri modeli.
 
-Bir başlangıç durağından bir varış durağına planlanan yolculuğu temsil eder.
-Bir yolculuk bir veya birden çok adımdan (TripStep) oluşur; her adım tek bir
-hatla (veya yürüyerek) yapılan bir parçadır. Çoklu-mod (otobüs + metro + tramvay)
-bu sayede gösterilebilir.
+Bir baslangic duragindan bir varis duragina planlanan yolculugu temsil eder.
+Bir yolculuk bir veya birden cok adimdan (TripStep) olusur; her adim tek bir
+hatla (veya yuruyerek) yapilan bir parcadir. Coklu-mod (otobus + metro + tramvay)
+bu sayede gosterilebilir.
 """
 from __future__ import annotations
 
@@ -12,14 +12,14 @@ from dataclasses import dataclass, field
 
 @dataclass
 class TripStep:
-    """Yolculuğun tek bir adımı (örn. "T1 hattıyla S001'den S005'e").
+    """Yolculugun tek bir adimi (orn. "T1 hattiyla S001'den S005'e").
 
     Alanlar:
-        mode: Bu adımın modu (örn. "tram", "bus", "walk").
-        from_stop_id: Adımın başladığı durak kimliği.
-        to_stop_id: Adımın bittiği durak kimliği.
-        route_id: Kullanılan hattın kimliği (yürüyüş adımında None olabilir).
-        duration_min: Adımın tahmini süresi (dakika).
+        mode: Bu adimin modu (orn. "tram", "bus", "walk").
+        from_stop_id: Adimin basladigi durak kimligi.
+        to_stop_id: Adimin bittigi durak kimligi.
+        route_id: Kullanilan hattin kimligi (yuruyus adiminda None olabilir).
+        duration_min: Adimin tahmini suresi (dakika).
     """
 
     mode: str
@@ -50,14 +50,14 @@ class TripStep:
 
 @dataclass
 class Trip:
-    """Planlanan bir yolculuk (adımların toplamı).
+    """Planlanan bir yolculuk (adimlarin toplami).
 
     Alanlar:
-        origin_stop_id: Başlangıç durağı kimliği.
-        destination_stop_id: Varış durağı kimliği.
-        steps: Yolculuğu oluşturan adımlar (sıralı).
-        total_duration_min: Toplam tahmini süre (dakika).
-        total_fare: Toplam tahmini ücret (TL).
+        origin_stop_id: Baslangic duragi kimligi.
+        destination_stop_id: Varis duragi kimligi.
+        steps: Yolculugu olusturan adimlar (sirali).
+        total_duration_min: Toplam tahmini sure (dakika).
+        total_fare: Toplam tahmini ucret (TL).
     """
 
     origin_stop_id: str
