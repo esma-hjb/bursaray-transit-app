@@ -1,0 +1,81 @@
+[
+    {
+        "from": null,
+        "to": null,
+        "duration": 0.0,
+        "fare": 0.0,
+        "steps": [],
+        "timestamp": "2026-06-09 21:11:32.859465"
+    },
+    {
+        "from": "S002",
+        "to": "S001",
+        "duration": 4.0,
+        "fare": 15.0,
+        "steps": [
+            {
+                "mode": "tram",
+                "from": "S002",
+                "to": "S001"
+            }
+        ],
+        "timestamp": "2026-06-09 21:11:40.603137"
+    },
+    {
+        "from": "S002",
+        "to": "S005",
+        "duration": 9.0,
+        "fare": 30.0,
+        "steps": [
+            {
+                "mode": "tram",
+                "from": "S002",
+                "to": "S003"
+            },
+            {
+                "mode": "bus",
+                "from": "S003",
+                "to": "S005"
+            }
+        ],
+        "timestamp": "2026-06-09 21:11:48.153286"
+    },
+    {
+        "from": "S004",
+        "to": "S006",
+        "duration": 2.5,
+        "fare": 15.0,
+        "steps": [
+            {
+                "mode": "metro",
+                "from": "S004",
+                "to": "S006"
+            }
+        ],
+        "timestamp": "2026-06-09 21:30:54.264938"
+    },
+    {
+        "from": "S002",
+        "to": "S006",
+        "duration": 11.5,
+        "fare": 45.0,
+        "steps": [
+            {
+                "mode": "tram",
+                "from": "S002",
+                "to": "S003"
+            },
+            {
+                "mode": "bus",
+                "from": "S003",
+                "to": "S005"
+            },
+            {
+                "mode": "metro",
+                "from": "S005",
+                "to": "S006"
+            }
+        ],
+        "timestamp": "2026-06-09 21:49:37.679698"
+    }
+]
