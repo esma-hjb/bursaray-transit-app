@@ -3,6 +3,6 @@
   {"id": "S002", "name": "Heykel", "lat": 40.1828, "lon": 29.0617, "line_ids": ["T1"]},
   {"id": "S003", "name": "Kulturpark", "lat": 40.1955, "lon": 29.0480, "line_ids": ["T1", "B1"]},
   {"id": "S004", "name": "Universite", "lat": 40.2300, "lon": 28.8700, "line_ids": ["M1"]},
-  {"id": "S005", "name": "Acemler", "lat": 40.2050, "lon": 28.9900, "line_ids": ["M1", "B1"]}
+  {"id": "S005", "name": "Acemler", "lat": 40.2050, "lon": 28.9900, "line_ids": ["M1", "B1"]},
   {"id": "S006", "name": "Emek", "lat": 40.2230, "lon": 28.9300, "line_ids": ["M1"]}
 ]
