@@ -1,4 +1,5 @@
 """Model sinifi testleri."""
+
 from models.route import Route, TransportMode
 from models.stop import Stop
 from models.trip import Trip, TripStep
@@ -16,8 +17,13 @@ def test_route_roundtrip():
 
 
 def test_trip_step_roundtrip():
-    step = TripStep(mode="tram", from_stop_id="S001", to_stop_id="S002",
-                    route_id="T1", duration_min=4.0)
+    step = TripStep(
+        mode="tram",
+        from_stop_id="S001",
+        to_stop_id="S002",
+        route_id="T1",
+        duration_min=4.0,
+    )
     assert TripStep.from_dict(step.to_dict()) == step
 
 

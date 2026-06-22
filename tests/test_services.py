@@ -1,4 +1,5 @@
 """Servis katmani testleri."""
+
 import pytest
 from unittest.mock import MagicMock, patch
 
@@ -7,7 +8,6 @@ from models.route import Route, TransportMode
 from services.stop_service import StopService
 from services.trip_planner import TripPlanner
 from utils.exceptions import StopNotFoundError, NoRouteFoundError
-
 
 STOPS = [
     Stop("S001", "Sehrekustu", 40.1985, 29.0610, ["T1", "B1"]),
