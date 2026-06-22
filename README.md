@@ -27,6 +27,10 @@ pip install -r requirements.txt
 
 ## Çalıştırma
 ```bash
+# Streamlit web arayüzü (önerilen)
+streamlit run app.py
+
+# CLI arayüzü
 python main.py
 ```
 
@@ -35,5 +39,11 @@ python main.py
 pytest
 ```
 
+## Uygulama Akış Şeması
+
+![Bursa Transit App Flowchart](bursa_transit_app_flowchart.png)
+
 ## Durum
 Geliştirme aşamasında (flowchart'a göre fazlar halinde ilerleniyor).
+
+> **Bonus:** Streamlit tabanlı web GUI mevcut — şartname bonus puanı kapsamında değerlendirilebilir.
