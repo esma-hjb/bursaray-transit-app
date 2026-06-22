@@ -1,4 +1,5 @@
 """Durak ve rota planlama ekranlari."""
+
 from __future__ import annotations
 
 from services.stop_service import StopService
@@ -7,12 +8,18 @@ from utils.exceptions import BursaTransitError
 
 
 class StopView:
+    """Durak ve rota planlama ekranları.
+
+    Kullanıcının yakındaki durakları görmesini ve rota planlamasını sağlar.
+    """
+
     def __init__(self):
         self._stop_svc = StopService()
         self._planner = TripPlanner()
 
     def show_nearby(self):
-        print("\n  Yakindaki Duraklar")
+        """Kullanıcının giriş yaptığı koordinatlara yakın durakları gösterir."""
+        print("\n  Yakındaki Duraklar")
         try:
             lat = float(input("  Enlem (orn. 40.1985): ").strip())
             lon = float(input("  Boylam (orn. 29.0610): ").strip())
@@ -37,6 +44,7 @@ class StopView:
         print()
 
     def show_trip_planner(self):
+        """Başlangıç ve varış durakları arasında rota planlar ve gösterir."""
         print("\n   Rota Planlayici")
         origin = input("  Baslangic durak ID (orn. S001): ").strip().upper()
         dest = input("  Varis durak ID    (orn. S005): ").strip().upper()
@@ -46,14 +54,15 @@ class StopView:
             print(f"  [!]  {e}\n")
             return
 
-        if not trip.steps:
+        if not trip.get("steps"):
             print("  [OK]  Zaten hedef duraktasiniz.\n")
             return
 
-        print(f"\n  Toplam sure : {trip.total_duration_min} dk")
-        print(f"  Toplam ucret: {trip.total_fare:.2f} TL\n")
-        for i, step in enumerate(trip.steps, 1):
-            print(f"  {i}. [{step.mode.upper()}] "
-                  f"{step.from_stop_id} -> {step.to_stop_id}  "
-                  f"(Hat: {step.route_id}, ~{step.duration_min:.0f} dk)")
+        print(f"\n  Toplam sure : {trip.get('total_duration_min', 0)} dk")
+        print(f"  Toplam ucret: {trip.get('total_fare', 0):.2f} TL\n")
+        for i, step in enumerate(trip.get("steps", []), 1):
+            print(
+                f"  {i}. [{step.get('mode', 'N/A').upper()}] "
+                f"{step.get('from_stop_id', 'N/A')} -> {step.get('to_stop_id', 'N/A')}"
+            )
         print()

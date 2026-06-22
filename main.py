@@ -2,6 +2,7 @@
 # Kullanıcı arayüzü (CLI menü sistemi)
 # Kullanıcıdan giriş alır ve ilgili service katmanına yönlendirir
 """Bursaray Transit App - giris noktasi."""
+
 from cli.main_menu import MainMenu
 
 

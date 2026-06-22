@@ -1,4 +1,5 @@
 """Ayarlar ekrani."""
+
 from __future__ import annotations
 
 from services.preference_service import PreferenceService

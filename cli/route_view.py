@@ -1,4 +1,5 @@
 """Hat detay ekrani."""
+
 from __future__ import annotations
 
 from services.route_service import RouteService
