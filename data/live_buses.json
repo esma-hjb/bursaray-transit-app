@@ -1,0 +1,14 @@
+[
+    {
+        "route": "S001",
+        "bus_id": "BUS101",
+        "next_stop": "Görükle",
+        "eta": 5
+    },
+    {
+        "route": "S002",
+        "bus_id": "BUS102",
+        "next_stop": "Üniversite",
+        "eta": 8
+    }
+]
