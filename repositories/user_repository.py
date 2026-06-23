@@ -4,6 +4,7 @@ Diger repository'lerden farkli olarak burada bir LISTE degil, TEK bir
 kullanici tercih nesnesi saklanir (data/user_data.json). Bu yuzden
 BaseRepository yerine kendi load/save metotlarini yazariz.
 """
+
 from __future__ import annotations
 
 from config import USER_DATA_FILE

@@ -25,9 +25,7 @@ class NoRouteFoundError(BursaTransitError):
     """Baslangic -> varis arasinda rota bulunamadiginda firlatilir."""
 
     def __init__(self, origin_id: str, dest_id: str):
-        super().__init__(
-            f"Rota bulunamadi: '{origin_id}' -> '{dest_id}'"
-        )
+        super().__init__(f"Rota bulunamadi: '{origin_id}' -> '{dest_id}'")
         self.origin_id = origin_id
         self.dest_id = dest_id
 

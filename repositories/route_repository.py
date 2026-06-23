@@ -1,4 +1,5 @@
 """Hat (Route) verisine erisim katmani."""
+
 from __future__ import annotations
 
 from config import ROUTES_FILE

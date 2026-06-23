@@ -1,4 +1,5 @@
 """Uygulama genelinde kullanilan basit logger kurulumu."""
+
 from __future__ import annotations
 
 import logging
@@ -14,8 +15,9 @@ def get_logger(name: str) -> logging.Logger:
     if not logger.handlers:
         handler = logging.StreamHandler(sys.stderr)
         handler.setFormatter(
-            logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-                              datefmt="%H:%M:%S")
+            logging.Formatter(
+                "%(asctime)s [%(levelname)s] %(name)s: %(message)s", datefmt="%H:%M:%S"
+            )
         )
         logger.addHandler(handler)
     logger.setLevel(logging.INFO)

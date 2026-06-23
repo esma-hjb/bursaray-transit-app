@@ -4,6 +4,7 @@ Kullanicinin uygulama tercihlerini temsil eder: dil, premium uyelik durumu
 ve favori duraklar. Bu veri calisma aninda uretilir ve config.USER_DATA_FILE
 dosyasinda saklanir (flowchart'taki "Onboarding / Language & preferences" adimi).
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field

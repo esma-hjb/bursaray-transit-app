@@ -4,6 +4,7 @@ Bir repository, belirli bir model turunu (orn. Stop) JSON dosyasindan
 okuyup nesneye ceviren ve nesneleri tekrar dosyaya yazan katmandir.
 Boylece servis/CLI katmani dosya islemleriyle ugrasmaz; sadece nesnelerle calisir.
 """
+
 from __future__ import annotations
 
 from storage.json_storage import read_json, write_json

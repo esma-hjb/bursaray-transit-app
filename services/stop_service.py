@@ -1,4 +1,5 @@
 """Durak is mantigi servisi."""
+
 from __future__ import annotations
 
 from config import NEARBY_RADIUS_M, NEARBY_RADIUS_EXPANDED_M

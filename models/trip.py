@@ -5,6 +5,7 @@ Bir yolculuk bir veya birden cok adimdan (TripStep) olusur; her adim tek bir
 hatla (veya yuruyerek) yapilan bir parcadir. Coklu-mod (otobus + metro + tramvay)
 bu sayede gosterilebilir.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field

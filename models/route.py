@@ -3,6 +3,7 @@
 Bir toplu tasima hattini temsil eder: kimlik, ad, ulasim modu
 (otobus / metro / tramvay) ve hattin ugradigi duraklarin sirasi.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -12,9 +13,9 @@ from enum import Enum
 class TransportMode(str, Enum):
     """Ulasim modu. (str'den turedigi icin JSON'a dogrudan yazilabilir.)"""
 
-    BUS = "bus"        # otobus
-    METRO = "metro"    # metro
-    TRAM = "tram"      # tramvay
+    BUS = "bus"  # otobus
+    METRO = "metro"  # metro
+    TRAM = "tram"  # tramvay
 
 
 @dataclass

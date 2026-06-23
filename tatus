@@ -1,0 +1,15 @@
+[33maa096f4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m CLI arayuzu ve menu akisi iyilestirildi
+[33m00e1050[m Dokumantasyon ve bagimliliklar guncellendi
+[33mdd8df56[m Testler canli takip ozelligine gore guncellendi
+[33m828915d[m Faz 4: Canli otobus verileri Streamlit arayuzune entegre edildi
+[33m5f776fa[m Faz 4: Canli otobus takip sistemi ve mock API eklendi
+[33m105037a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Improve UI + fix favorites system + add route history
+[33mf59ddeb[m Added initial Streamlit GUI for Bursa Transit App
+[33m5fe0d85[m Faz 3: seed data guncellendi, hata yonetimi ve yardimci siniflar eklendi
+[33m48e2228[m Faz 3: servis katmani tamamlandi (TripPlanner BFS, ScheduleService, StopService)
+[33mfcdf952[m Faz 3: config, storage ve bagimlilıklar guncellendi
+[33mb127783[m Faz 2: storage + repositories + seed data
+[33m8baf68a[m Faz 1: MODELS eklendi
+[33m740da1c[m Yapılan değişiklik
+[33m6a0b5ff[m Faz 0: altyapı (README, requirements, config, paketler)
+[33m880d77d[m Fix filename casing

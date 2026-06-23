@@ -3,6 +3,7 @@
 data/schedule.json dosyasindaki hat kalki saatlerini okur ve
 verilen saate gore "sonraki sefer" hesaplar.
 """
+
 from __future__ import annotations
 
 from datetime import datetime, timedelta

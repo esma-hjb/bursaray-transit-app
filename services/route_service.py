@@ -1,4 +1,5 @@
 """Hat is mantigi servisi."""
+
 from __future__ import annotations
 
 from repositories.route_repository import RouteRepository

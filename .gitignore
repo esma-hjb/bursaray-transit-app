@@ -35,4 +35,4 @@ Thumbs.db
 logs/
 
 # Kullanıcı verisi (runtime'da üretilir, seed data değil)
-Data/user_data.json
+data/user_data.json

@@ -3,6 +3,7 @@
 Bir toplu tasima duragini temsil eder: kimlik, ad, konum (enlem/boylam)
 ve o duraktan gecen hatlarin kimlikleri.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field

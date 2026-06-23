@@ -1,8 +1,17 @@
 [
-  {"id": "S001", "name": "Sehrekustu", "lat": 40.1985, "lon": 29.0610, "line_ids": ["T1", "B1"]},
-  {"id": "S002", "name": "Heykel", "lat": 40.1828, "lon": 29.0617, "line_ids": ["T1"]},
-  {"id": "S003", "name": "Kulturpark", "lat": 40.1955, "lon": 29.0480, "line_ids": ["T1", "B1"]},
-  {"id": "S004", "name": "Universite", "lat": 40.2300, "lon": 28.8700, "line_ids": ["M1"]},
-  {"id": "S005", "name": "Acemler", "lat": 40.2050, "lon": 28.9900, "line_ids": ["M1", "B1"]},
-  {"id": "S006", "name": "Emek", "lat": 40.2230, "lon": 28.9300, "line_ids": ["M1"]}
+  {"id": "S001", "name": "Şehreküstü", "lat": 40.1985, "lon": 29.0610, "line_ids": ["T1", "B1", "B5"]},
+  {"id": "S002", "name": "Heykel", "lat": 40.1828, "lon": 29.0617, "line_ids": ["T1", "B2"]},
+  {"id": "S003", "name": "Kültürpark", "lat": 40.1955, "lon": 29.0480, "line_ids": ["T1", "B1"]},
+  {"id": "S004", "name": "Üniversite", "lat": 40.2300, "lon": 28.8700, "line_ids": ["M1"]},
+  {"id": "S005", "name": "Acemler", "lat": 40.2050, "lon": 28.9900, "line_ids": ["M1", "B1", "B3"]},
+  {"id": "S006", "name": "Emek", "lat": 40.2230, "lon": 28.9300, "line_ids": ["M1", "B3"]},
+  {"id": "S007", "name": "Osmangazi", "lat": 40.1900, "lon": 29.0700, "line_ids": ["T1", "B2"]},
+  {"id": "S008", "name": "Nilüfer", "lat": 40.2150, "lon": 28.9750, "line_ids": ["B3", "B4"]},
+  {"id": "S009", "name": "Görükle", "lat": 40.2350, "lon": 28.8600, "line_ids": ["M1", "B4"]},
+  {"id": "S010", "name": "İnegöl Yolu", "lat": 40.1700, "lon": 29.1200, "line_ids": ["B2", "B5"]},
+  {"id": "S011", "name": "Bursa Şehir Hastanesi", "lat": 40.2100, "lon": 29.0000, "line_ids": ["B3", "B4"]},
+  {"id": "S012", "name": "Terminal", "lat": 40.1650, "lon": 29.0050, "line_ids": ["B1", "B5"]},
+  {"id": "S013", "name": "Mudanya Yolu", "lat": 40.2400, "lon": 28.9500, "line_ids": ["B4"]},
+  {"id": "S014", "name": "Fethiye", "lat": 40.1780, "lon": 29.0400, "line_ids": ["T1", "B2"]},
+  {"id": "S015", "name": "Setbaşı", "lat": 40.1860, "lon": 29.0560, "line_ids": ["T1", "B1", "B2"]}
 ]

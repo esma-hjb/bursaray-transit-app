@@ -4,10 +4,10 @@ Dis kutuphane gerektirmeden Haversine formuluyle iki koordinat arasindaki
 mesafeyi metre cinsinden hesaplar. Faz 5'teki "yakin durak" ozelliginde
 ve rota planlamada kullanilir.
 """
+
 from __future__ import annotations
 
 import math
-
 
 # Dunya yaricapi (metre)
 _EARTH_RADIUS_M = 6_371_000

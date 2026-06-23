@@ -1,4 +1,5 @@
 """Durak (Stop) verisine erisim katmani."""
+
 from __future__ import annotations
 
 from config import STOPS_FILE

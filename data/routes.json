@@ -1,5 +1,44 @@
 [
-  {"id": "T1", "name": "Sehrekustu - Heykel", "mode": "tram", "stop_ids": ["S001", "S003", "S002"]},
-  {"id": "M1", "name": "Universite - Acemler", "mode": "metro", "stop_ids": ["S004", "S006", "S005"]},
-  {"id": "B1", "name": "Kulturpark - Acemler", "mode": "bus", "stop_ids": ["S003", "S001", "S005"]}
+  {
+    "id": "T1",
+    "name": "Şehreküstü - Heykel Tramvayı",
+    "mode": "tram",
+    "stop_ids": ["S001", "S003", "S014", "S015", "S007", "S002"]
+  },
+  {
+    "id": "M1",
+    "name": "Üniversite - Acemler Metrosu",
+    "mode": "metro",
+    "stop_ids": ["S004", "S009", "S006", "S005"]
+  },
+  {
+    "id": "B1",
+    "name": "Şehreküstü - Terminal - Acemler Otobüsü",
+    "mode": "bus",
+    "stop_ids": ["S001", "S003", "S015", "S012", "S005"]
+  },
+  {
+    "id": "B2",
+    "name": "Heykel - İnegöl Yolu Otobüsü",
+    "mode": "bus",
+    "stop_ids": ["S002", "S007", "S014", "S015", "S010"]
+  },
+  {
+    "id": "B3",
+    "name": "Acemler - Şehir Hastanesi - Nilüfer Otobüsü",
+    "mode": "bus",
+    "stop_ids": ["S005", "S006", "S011", "S008"]
+  },
+  {
+    "id": "B4",
+    "name": "Nilüfer - Mudanya - Görükle Otobüsü",
+    "mode": "bus",
+    "stop_ids": ["S008", "S011", "S013", "S009"]
+  },
+  {
+    "id": "B5",
+    "name": "Şehreküstü - Terminal - İnegöl Yolu Otobüsü",
+    "mode": "bus",
+    "stop_ids": ["S001", "S012", "S010"]
+  }
 ]

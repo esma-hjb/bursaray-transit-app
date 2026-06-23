@@ -1,4 +1,5 @@
 """Kullanici tercihleri is mantigi servisi."""
+
 from __future__ import annotations
 
 from repositories.user_repository import UserRepository

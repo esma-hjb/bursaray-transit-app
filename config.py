@@ -1,4 +1,5 @@
 """Uygulama genel ayarları ve sabitleri."""
+
 from pathlib import Path
 
 # --- Yollar ---
@@ -9,17 +10,15 @@ ROUTES_FILE = DATA_DIR / "routes.json"
 SCHEDULE_FILE = DATA_DIR / "schedule.json"
 USER_DATA_FILE = DATA_DIR / "user_data.json"
 
-# --- Dış API (Faz 4) ---
-API_BASE_URL = "https://example-bursa-transit-api/v1"
-API_TIMEOUT = 10
-API_MAX_RETRIES = 3
+# --- Dış API ---
+# Geliştirme sırasında yerel mock API sunucusu kullanılır.
+# API çalışmıyorsa LiveBusService otomatik mock veriye geçer.
+API_BASE_URL = "http://127.0.0.1:5000"
+API_TIMEOUT = 3  # Hızlı timeout — mock'a hızlı düşsün
 
-# --- Yakın durak (Faz 5) ---
+# --- Yakın durak ---
 NEARBY_RADIUS_M = 500
 NEARBY_RADIUS_EXPANDED_M = 1500
-
-# --- Canlı takip (Faz 6) ---
-ETA_REFRESH_SECONDS = 10
 
 # --- Kullanıcı tercihleri ---
 DEFAULT_LANGUAGE = "tr"

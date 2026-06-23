@@ -5,13 +5,11 @@ from __future__ import annotations
 from services.stop_service import StopService
 from services.trip_planner import TripPlanner
 from utils.exceptions import BursaTransitError
+from utils.validators import validate_coordinates
 
 
 class StopView:
-    """Durak ve rota planlama ekranları.
-
-    Kullanıcının yakındaki durakları görmesini ve rota planlamasını sağlar.
-    """
+    """Durak ve rota planlama ekranları."""
 
     def __init__(self):
         self._stop_svc = StopService()
@@ -23,8 +21,9 @@ class StopView:
         try:
             lat = float(input("  Enlem (orn. 40.1985): ").strip())
             lon = float(input("  Boylam (orn. 29.0610): ").strip())
-        except ValueError:
-            print("  [!]  Gecersiz koordinat.\n")
+            lat, lon = validate_coordinates(lat, lon)
+        except ValueError as e:
+            print(f"  [!]  {e}\n")
             return
 
         results = self._stop_svc.get_nearby_stops(lat, lon)
@@ -54,15 +53,15 @@ class StopView:
             print(f"  [!]  {e}\n")
             return
 
-        if not trip.get("steps"):
+        if not trip.steps:
             print("  [OK]  Zaten hedef duraktasiniz.\n")
             return
 
-        print(f"\n  Toplam sure : {trip.get('total_duration_min', 0)} dk")
-        print(f"  Toplam ucret: {trip.get('total_fare', 0):.2f} TL\n")
-        for i, step in enumerate(trip.get("steps", []), 1):
+        print(f"\n  Toplam sure : {trip.total_duration_min} dk")
+        print(f"  Toplam ucret: {trip.total_fare:.2f} TL\n")
+        for i, step in enumerate(trip.steps, 1):
             print(
-                f"  {i}. [{step.get('mode', 'N/A').upper()}] "
-                f"{step.get('from_stop_id', 'N/A')} -> {step.get('to_stop_id', 'N/A')}"
+                f"  {i}. [{step.mode.upper()}] "
+                f"{step.from_stop_id} -> {step.to_stop_id}"
             )
         print()
