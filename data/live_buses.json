@@ -1,14 +1,32 @@
 [
     {
-        "route": "S001",
+        "route": "T1",
         "bus_id": "BUS101",
+        "next_stop": "Şehreküstü",
+        "eta": 3
+    },
+    {
+        "route": "M1",
+        "bus_id": "BUS102",
         "next_stop": "Görükle",
+        "eta": 7
+    },
+    {
+        "route": "B1",
+        "bus_id": "BUS103",
+        "next_stop": "Terminal",
         "eta": 5
     },
     {
-        "route": "S002",
-        "bus_id": "BUS102",
-        "next_stop": "Üniversite",
-        "eta": 8
+        "route": "B2",
+        "bus_id": "BUS104",
+        "next_stop": "Fethiye",
+        "eta": 9
+    },
+    {
+        "route": "B3",
+        "bus_id": "BUS105",
+        "next_stop": "Nilüfer",
+        "eta": 4
     }
 ]

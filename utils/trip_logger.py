@@ -5,21 +5,15 @@ Kullanıcı tarafından planlanan rotaların tarihçesini JSON dosyasına kayded
 
 import json
 from datetime import datetime
-from pathlib import Path
-
 from config import DATA_DIR
 
 FILE_PATH = DATA_DIR / "trips_history.json"
 
 
 def save_trip(trip):
-    """Seyahat kaydını dosyaya kaydeder.
-
-    Args:
-        trip: Kaydedilecek seyahat nesnesi veya sözlüğü.
-    """
+    """Seyahat kaydını dosyaya kaydeder."""
     try:
-        with open(FILE_PATH, "r") as f:
+        with open(FILE_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         data = []
@@ -47,36 +41,27 @@ def save_trip(trip):
     data.append(record)
 
     try:
-        with open(FILE_PATH, "w") as f:
+        with open(FILE_PATH, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4, ensure_ascii=False)
     except IOError as e:
         print(f"[!] Seyahat kaydedilemedi: {e}")
 
 
 def load_trips():
-    """Kaydedilmiş seyahatleri dosyadan yükler.
-
-    Returns:
-        Seyahat kayıtlarının listesi.
-    """
+    """Kaydedilmiş seyahatleri dosyadan yükler."""
     try:
-        with open(FILE_PATH, "r") as f:
+        with open(FILE_PATH, "r", encoding="utf-8") as f:
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         return []
 
 
 def save_all_trips(trips):
-    """Tüm seyahat kayıtlarını dosyaya kaydeder (tüm veriyi değiştirir).
-
-    Args:
-        trips: Seyahat kayıtlarının listesi.
-    """
+    """Tüm seyahat kayıtlarını dosyaya kaydeder."""
     if not isinstance(trips, list):
         return
-
     try:
-        with open(FILE_PATH, "w") as f:
+        with open(FILE_PATH, "w", encoding="utf-8") as f:
             json.dump(trips, f, indent=4, ensure_ascii=False)
     except IOError as e:
         print(f"[!] Seyahatler kaydedilemedi: {e}")
